@@ -3,16 +3,16 @@ import React, {useState, useContext} from 'react';
 import Movie from './Movie';
 import { MovieContext } from './MovieContext';
 
-const MovieList = () => {
+const Nav = () => {
+
     const [movies, setMovies] = useContext(MovieContext);
 
     return(
-        <div>
-            {movies.map(movie => (
-                <Movie name={movie.name} price={movie.price} key={movie.id}  />
-            ))}
-        </div>
+        <nav>
+            <h3>MovieDB</h3>
+            <p>List of Movies: {movies.length} </p>
+        </nav>
     );
 }
 
-export default MovieList;
+export default Nav;
